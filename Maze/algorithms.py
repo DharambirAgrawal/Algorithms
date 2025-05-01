@@ -30,7 +30,7 @@ class search_algorithm:
                     if self.maze[r][c] == ' ':
                         self.maze[r][c] = '*'
                         self.vis.highlight_cell(r, c, (200, 200, 0))
-                self.vis.highlight_cell(self.goal[0], self.goal[1],( 200, 200, 0))
+                self.vis.highlight_cell(self.goal[0], self.goal[1],(200, 200, 0))
                 pygame.time.delay(50)
                 return self.maze
 
@@ -39,6 +39,9 @@ class search_algorithm:
             visited.add(current)
 
             row, col = current
+            self.vis.highlight_cell(row, col, (30, 144, 255))
+            pygame.time.delay(50)
+            time.sleep(0.1)
 
             # 4 directions
             for dr, dc in [(0,1), (1,0), (-1,0), (0,-1)]:
@@ -46,9 +49,6 @@ class search_algorithm:
                 if 0 <= nr < self.rows and 0 <= nc < self.cols:
                     if self.maze[nr][nc] != '#' and (nr, nc) not in visited:
                         stack.append(path + [(nr, nc)])
-                        time.sleep(0.1)
-                        self.vis.highlight_cell(nr, nc, (30, 144, 255))
-                        pygame.time.delay(50)
 
         print("No path found.")
         return self.maze
@@ -70,7 +70,7 @@ class search_algorithm:
                         self.maze[r][c] = '*'
                         self.vis.highlight_cell(r, c, (0, 255, 0))
                 self.vis.highlight_cell(self.goal[0], self.goal[1], (0, 255, 0))
-                pygame.time.delay(50)
+                # pygame.time.delay(50)
                
                 return self.maze
 
@@ -79,6 +79,9 @@ class search_algorithm:
             visited.add(current)
 
             row, col = current
+            self.vis.highlight_cell(row, col, (30, 144, 255))
+            pygame.time.delay(50)
+            time.sleep(0.1)
 
             # 4 directions
             for dr, dc in [(0,1), (1,0), (-1,0), (0,-1)]:
@@ -86,9 +89,7 @@ class search_algorithm:
                 if 0 <= nr < self.rows and 0 <= nc < self.cols:
                     if self.maze[nr][nc] != '#' and (nr, nc) not in visited:
                         queue.append(path + [(nr, nc)])
-                        time.sleep(0.1)
-                        self.vis.highlight_cell(nr, nc, (30, 144, 255))
-                        pygame.time.delay(50)
+                        
                         
 
         print("No path found.")
