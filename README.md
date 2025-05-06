@@ -53,7 +53,7 @@ The sorting directory contains implementations of various sorting algorithms wit
 - **Multiple Algorithms**:
   - **Selection Sort**: Repeatedly selects the smallest element from the unsorted portion
   - **Binary Insertion**: Uses binary search to find the insertion position, making it more efficient
-  - More algorithms coming soon!
+  - More algorithms coming soon like bubble sort!
 
 ### How to Run
 
