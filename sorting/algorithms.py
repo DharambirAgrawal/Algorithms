@@ -73,6 +73,18 @@ class SortingAlgorithms:
             pass_num += 1
         
         self.visualizer.finish_animation()
+
+    def merge_sort(self):
+        pass
+
+    def quick_sort(self):
+        pass
+
+    def heap_sort(self):
+        pass
+
+    def radix_sort(self):
+        pass
             
 
         
