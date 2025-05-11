@@ -54,7 +54,28 @@ class SortingAlgorithms:
         
     def bubble_sort(self):
         # Here is bubble sort Algorithm
-        arr= []
+
+        arr = self.array.copy()
+        self.visualizer.update_array(arr)
+        changed = True
+        
+        while changed:
+            changed= False
+            pass_num = 0
+            for i in range(len(arr)-1 - pass_num):
+                a,b = self.array[i], self.array[i+1]
+
+                if a>b:
+                    arr[i], arr[i+1] = b,a
+                    self.visualizer.update_array(arr)
+                    time.sleep(0.01)
+                    changed = True
+            pass_num += 1
+        
+        self.visualizer.finish_animation()
+            
+
+        
 
 
             
