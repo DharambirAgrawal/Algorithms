@@ -53,7 +53,7 @@ class SortingAlgorithms:
 
         
     def bubble_sort(self):
-        # Here is bubble sort Algo
+        # Here is bubble sort Algorithm
         arr= []
 
 
