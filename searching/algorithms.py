@@ -12,4 +12,11 @@ class Searching:
         M = L + (R-L) // 2  --> prevents overflow
         """
 
+    def conditional_binary_search(self,target):
+        """
+                 | searching this point of change
+                 V
+        [T,T,T,T,F,F,F]
+        """
+
 
