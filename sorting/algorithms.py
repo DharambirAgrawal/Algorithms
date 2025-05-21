@@ -78,8 +78,25 @@ class SortingAlgorithms:
     def merge_sort(self):
         pass
 
-    def quick_sort(self):
-        pass
+    def quick_sort(arr):
+        n = len(arr)
+        
+        if n <= 1:
+            return arr
+            
+        piv = arr[-1]
+        
+        L = [arr[i] for i in range(len(arr)-1) if arr[i] <= piv]
+        
+        R = [arr[i] for i in range(len(arr)-1) if arr[i] > piv]
+        
+    
+        
+        L = quick_sort(L)
+        R = quick_sort(R)
+        
+        return L + [piv] + R
+    
    
 
     def heap_sort(self):
@@ -111,7 +128,8 @@ class SortingAlgorithms:
 
         return res
 
-    def radix_sort(selfa):
+    def radix_sort(self):
+        arr = self.array
         maxx = max(arr)
         minn = min(arr)
         res = []
