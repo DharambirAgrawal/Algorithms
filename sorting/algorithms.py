@@ -1,4 +1,5 @@
 import time
+import heapq
 
 class SortingAlgorithms:
 
@@ -78,31 +79,22 @@ class SortingAlgorithms:
         pass
 
     def quick_sort(self):
-        
-        def partition(low, high):
-            pivot = self.array[high]
-            i = low - 1
-
-            for j in range(low, high):
-                if self.array[j] <= pivot:
-                    i += 1
-                    self.array[i], self.array[j] = self.array[j], self.array[i]
-                    self.visualizer.update_array(self.array)
-                    time.sleep(0.05)
-
-            self.array[i + 1], self.array[high] = self.array[high], self.array[i + 1]
-            return i + 1
-        def quick_sort_recursive(low, high):
-            if low < high:
-                pi = partition(low, high)
-                quick_sort_recursive(low, pi - 1)
-                quick_sort_recursive(pi + 1, high)
-        quick_sort_recursive(0, len(self.array) - 1)
-        self.visualizer.finish_animation()
+        pass
    
 
     def heap_sort(self):
-        pass
+        arr= self.array
+        n = len(arr)
+        heapq.heapify(arr)
+
+        res = [0] * n
+
+        for i in range(n):
+            min = heapq.hippop(arr)
+            arr[i] = min
+
+    return res
+            
 
     def radix_sort(self):
         pass
