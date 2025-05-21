@@ -96,8 +96,40 @@ class SortingAlgorithms:
     return res
             
 
-    def radix_sort(self):
-        pass
+    def radix_sort_positive(self):
+        # only for positive number
+        
+        maxx = max(self.array)
+
+        counts = [0] * (maxx+1)
+        res = []
+        for i in self.array:
+            counts[i] = counts[i] +1
+
+        for i in range(len(counts):
+            res = res + [i] * counts[i]
+
+        return res
+
+    def radix_sort(selfa):
+        maxx = max(arr)
+        minn = min(arr)
+        res = []
+
+        if minn < 0:
+            maxx = maxx - minn
+        
+        counts = [0] * (maxx + 1)
+
+        for val in arr:
+            counts[val-minn] += 1 
+        
+        for i in range(len(counts)):
+            res = res + [i + minn] * counts[i]
+
+        return res
+
+# radix_sort(A)
             
 
         
