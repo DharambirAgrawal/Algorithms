@@ -76,7 +76,38 @@ class SortingAlgorithms:
         self.visualizer.finish_animation()
 
     def merge_sort(self):
-        pass
+
+        def recursive(arr):
+            n = len(arr)
+
+            if n <= 1:
+                return arr
+            m = n // 2
+
+            L = arr[:m]
+            R = arr[m:]
+
+            L = recursive(L)
+            R = recursive(R)
+
+            l , r = 0,0 
+            res = []
+
+            while  l < len(L) and r < len(R):
+
+                if L[l] < R[r]:
+                    res.append(L[l])
+                    l = l+1
+                else:
+                    res.append(R[r])
+                    r = r+1
+            
+            res.extend(L[l:])
+            res.extend(R[r:])
+            return res
+
+        
+        
 
     def quick_sort(arr):
         n = len(arr)
@@ -113,7 +144,7 @@ class SortingAlgorithms:
     return res
             
 
-    def radix_sort_positive(self):
+    def counting_sort_positive(self):
         # only for positive number
         
         maxx = max(self.array)
@@ -128,7 +159,7 @@ class SortingAlgorithms:
 
         return res
 
-    def radix_sort(self):
+    def counting_sort(self):
         arr = self.array
         maxx = max(arr)
         minn = min(arr)
