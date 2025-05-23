@@ -11,6 +11,25 @@ class Searching:
         or
         M = L + (R-L) // 2  --> prevents overflow
         """
+        arr = self.array[:].sort()
+        
+
+        def binary_search(arr, target):
+            L = 0
+            R = len(arr) - 1
+
+            while R >= L:
+                M = L + (R-L) // 2
+                if arr[M] == target:
+                    return True
+                
+                elif arr[M] < target:
+                    L = M + 1
+                else:
+                    R = M - 1
+            return False
+
+
 
     def conditional_binary_search(self,target):
         """
