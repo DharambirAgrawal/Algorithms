@@ -123,7 +123,6 @@ python deepreinforcement.py
 
 ## Upcoming Additions
 
-- More sorting algorithms
 - Graph algorithms
 - Dynamic programming examples
 - Neural network implementations
