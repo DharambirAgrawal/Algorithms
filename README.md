@@ -53,7 +53,11 @@ The sorting directory contains implementations of various sorting algorithms wit
 - **Multiple Algorithms**:
   - **Selection Sort**: Repeatedly selects the smallest element from the unsorted portion
   - **Binary Insertion**: Uses binary search to find the insertion position, making it more efficient
-  - More algorithms coming soon like bubble sort!
+  - **Bubble Sort**: Repeatedly steps through the list, compares adjacent elements, and swaps them if needed
+  - **Merge Sort**: Divides the array into smaller subarrays, sorts, and merges them
+  - **Quick Sort**: Picks a pivot element and partitions the array around the pivot
+  - **Heap Sort**: Uses a binary heap data structure for efficient sorting
+  - **Counting Sort**: Non-comparison based sorting algorithm for positive integers
 
 ### How to Run
 
@@ -67,6 +71,8 @@ You can choose which sorting algorithm to run by uncommenting the relevant line 
 ```python
 # sorting.selection_sort()
 sorting.binary_insertion()
+# sorting.bubble_sort()
+# sorting.merge_sort()
 ```
 
 ### Project Structure
@@ -82,9 +88,43 @@ sorting.binary_insertion()
 - Color transitions indicate comparisons and swaps
 - Final green color indicates that sorting is complete
 
+## Searching Algorithms
+
+The searching directory contains implementations of various search algorithms.
+
+### Features
+
+- **Traditional Binary Search**: Efficiently finds elements in a sorted array
+- **Conditional Binary Search**: Finds the point of change in a boolean array
+
+## Reinforcement Learning
+
+The repository also includes an implementation of Deep Q-Learning for reinforcement learning.
+
+### Features
+
+- **Deep Q-Network (DQN)**: Implementation using TensorFlow and Keras
+- **Experience Replay**: Uses a memory buffer to store and sample past experiences
+- **CartPole Environment**: Trains an agent to balance a pole on a moving cart
+
+### How to Run
+
+```bash
+cd test
+python deepreinforcement.py
+```
+
+### Implementation Details
+
+- **Neural Network**: A simple feed-forward network with two hidden layers
+- **Exploration Strategy**: Epsilon-greedy policy with decay
+- **Training Process**: Collects experiences and learns from batches
+- **Testing**: Visualizes the trained agent's performance
+
 ## Upcoming Additions
 
 - More sorting algorithms
 - Graph algorithms
 - Dynamic programming examples
+- Neural network implementations
 - And more...
