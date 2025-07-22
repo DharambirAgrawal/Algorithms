@@ -114,3 +114,10 @@ model.save('cartpole_dqn_model.h5')
 # Note: The code above is a simple implementation of a Deep Q-Network (DQN) for the CartPole environment.
 # It uses experience replay and an epsilon-greedy strategy for action selection.
 # The model is trained over a number of episodes, and the performance is printed after each episode.
+# The trained model can be saved and loaded for future use.
+# Note: Make sure to have the required libraries installed in your Python environment.
+# You can install them using pip:
+# pip install numpy tensorflow gymnasium
+# Note: The code is designed to run in a Python environment with TensorFlow and Gymnasium installed.
+# Note: The CartPole environment is a classic control problem where the goal is to balance a pole on a cart.
+# The agent learns to balance the pole by applying forces to the cart.
