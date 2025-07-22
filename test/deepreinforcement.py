@@ -111,3 +111,6 @@ test_env.close()
 model.save('cartpole_dqn_model.h5')
 # Load the model
 # model = tf.keras.models.load_model('cartpole_dqn_model.h5')
+# Note: The code above is a simple implementation of a Deep Q-Network (DQN) for the CartPole environment.
+# It uses experience replay and an epsilon-greedy strategy for action selection.
+# The model is trained over a number of episodes, and the performance is printed after each episode.
