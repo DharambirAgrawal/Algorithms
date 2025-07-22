@@ -106,3 +106,8 @@ for _ in range(test_episodes):
             break
 
 test_env.close()
+# end of the code
+# Save the model
+model.save('cartpole_dqn_model.h5')
+# Load the model
+# model = tf.keras.models.load_model('cartpole_dqn_model.h5')
