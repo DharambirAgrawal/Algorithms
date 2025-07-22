@@ -121,3 +121,4 @@ model.save('cartpole_dqn_model.h5')
 # Note: The code is designed to run in a Python environment with TensorFlow and Gymnasium installed.
 # Note: The CartPole environment is a classic control problem where the goal is to balance a pole on a cart.
 # The agent learns to balance the pole by applying forces to the cart.
+# Note: The code uses a simple neural network with two hidden layers to approximate the Q-values.
