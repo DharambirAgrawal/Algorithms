@@ -122,3 +122,6 @@ model.save('cartpole_dqn_model.h5')
 # Note: The CartPole environment is a classic control problem where the goal is to balance a pole on a cart.
 # The agent learns to balance the pole by applying forces to the cart.
 # Note: The code uses a simple neural network with two hidden layers to approximate the Q-values.
+# Note: The model is trained using the Huber loss function, which is more robust to outliers than mean squared error.
+# Note: The code uses a replay memory to store experiences and sample them for training.
+# Note: The epsilon-greedy strategy allows the agent to explore the environment while gradually reducing exploration over time.
